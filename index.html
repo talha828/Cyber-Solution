@@ -15,10 +15,9 @@
       </div>  
         <ul class="nav_list desktop_nav">
           <li class="nav_item"><a href="#" class="nav_link">Home</a></li>
-          <li class="nav_item"><a href="#" class="nav_link">Features</a></li>
-          <li class="nav_item"><a href="#" class="nav_link">Community</a></li>
-          <li class="nav_item"><a href="#" class="nav_link">Blog</a></li>
-          <li class="nav_item"><a href="#" class="nav_link">Pricing</a></li>
+          <li class="nav_item"><a href="#section_header" class="nav_link">Features</a></li>
+          <li class="nav_item"><a href="#blog_container" class="nav_link">Blog</a></li>
+          <li class="nav_item"><a href="prices_template\prices_template.html" class="nav_link">Pricing</a></li>
         </ul>
         <div class="nav_burger">
           <svg
@@ -51,9 +50,6 @@
         <li class="mobile_nav_item mobile_nav_item_last">
           <a href="#" class="mobile_nav_link">Pricing</a>
         </li>
-        <li class="mobile_nav_item">
-          <a href="#" class="mobile_nav_btn nav_btn">Register Now &rarr;</a>
-        </li>
       </ul>
     </nav>
     <header class="header">
@@ -66,7 +62,20 @@
             <p class="header_text">
               Review your website to assess its security status and provide guidance 
             </p>
-            <a href="#" class="header_btn">Scan Now</a>
+            <div class="email">
+              <input
+                type="text"
+                class="email_input"
+                placeholder="your email address" />
+            </div>
+          
+            <div class="url">
+              <input
+                type="text"
+                class="url_input"
+                placeholder="your website URL" />
+            </div>
+            <a href="#" class="header_btn" onclick = "if (! confirm('Thank you for your trust. Once the website scan is complete, the full report will be sent to your email. This process may take more than thirty minutes, so we appreciate your patience.')) { return false; }" >Scan Now</a>
           </div>
           <div class="header_img">
             <img src="/images/header.png" alt="">
@@ -110,7 +119,7 @@
       </section>
       <section class="section">
         <div class="container services_container">
-          <div class="section_header">
+          <div class="section_header" id="section_header">
             <h2 class="section_title">
               Services & Features
             </h2>
@@ -161,7 +170,7 @@
             <p class="experience_text">
               Mobile Security Framework (MobSF) is a security research platform for mobile applications in Android, iOS and Windows Mobile. MobSF can be used for a variety of use cases such as mobile application security, penetration testing, malware analysis, and privacy analysis.The Static Analyzer supports popular mobile app binaries like APK, IPA, APPX and source code. Meanwhile, the Dynamic Analyzer supports both Android and iOS applications and offers a platform 
             </p>
-            <a href="#" class="experience_btn">Application Analysis</a>
+            <a href="https://mobsf.live/" class="experience_btn">Application Analysis Click Here</a>
           </div>
         </div>
       </section>
@@ -221,7 +230,7 @@
             <p class="experience_text">
               Building trust with your users starts with a secure website!  This means using encryption to scramble data, enforcing strong passwords and two-factor authentication, keeping software updated to patch vulnerabilities, implementing user access controls, regularly backing up your data, and using security scanners to identify weaknesses. By following these practices, you can design websites and applications that are safe and secure for everyone.  Ready to take your website security to the next level?
             </p>
-            <a href="#" class="experience_btn">Get a security consultation</a>
+            <a href="#" onclick="if (! confirm('This Features in under develop. we will release it on our next itration')) { return false; }" class="experience_btn">Get a security consultation</a>
           </div>
         </div>
       </section>
@@ -250,7 +259,7 @@
         </div>
       </section>
       <section class="section">
-        <div class="container blog_container">
+        <div class="container blog_container" id="blog_container">
           <div class="section_header">
             <h2 class="section_title">Let's check out our latest blogs</h2>
             <p class="section_text">
@@ -360,7 +369,7 @@
               type="text"
               class="footer_update_input"
               placeholder="your email address" />
-            <span>&rarr;</span>
+            <a onclick="if (! confirm('You just subscribe our news letter thanks for your trust')) { return false; }"><span >&rarr;</span></a>
           </div>
         </div>
       </div>
